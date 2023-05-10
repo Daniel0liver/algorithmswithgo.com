@@ -59,3 +59,10 @@ func intSlicesEqual(got, want []int) error {
 	}
 	return nil
 }
+func BenchmarkFindTwoThatSum(b *testing.B) {
+	for i:=0; i < b.N; i++ {
+		FindTwoThatSum([]int{1, 2, 3, 4}, 7)
+	}
+	
+}
+
